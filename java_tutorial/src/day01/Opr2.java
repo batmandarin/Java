@@ -9,7 +9,7 @@ public class Opr2 {
 		System.out.println((국어+영어+수학)/3);
 	    //합계와 평균을 구해보자
 	    //합계 = 250
-	    //평균 = 
+	    //평균 = 83
 	};
 
 }
