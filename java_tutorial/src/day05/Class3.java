@@ -34,15 +34,16 @@ public class Class3 {
 	    System.out.println(신격호.정보출력());
 	    System.out.println(저우량.정보출력());
 	    System.out.println(김정현.정보출력());
-	    
+	    //차정보 정보 둘 다 클래스,바깥클래스 보이드에서 잘 입력받고 
+	    //대입이 된 다음에 위 식으로 클래스명.정보입력이든, 단순 프린트이든 어느식으로든 출력할 수 잇음 ㅇㅇ
 	}
 }
 
 class Car{
 	String color;
 	String onwer_name;
-	String Car_name;
-	
+	String Car_name;//여기도 null이 기본값
+	//보이드+차정보를 먼저 입력했기 때문에 위 스트링에 대입된 것
 	void 차정보입력(String 색상, String 주인, String 차이름) {
 		color = 색상;
 		onwer_name = 주인;
@@ -59,13 +60,14 @@ class Human{
 	String 성별;
     String 나이;
 	String 키;//디스가 없고 또 스트링 입력칸 함수칸에 값전달이 안되니 눌이 나온 것. 그냥 아무것도 안 넣는 작업을해서그럼
-	
+	//스트링도 단순 문자열이니까 눌만 나옴.. 같은 이름끼리 같다는 함수값 없는 문장만 입력되었으니 디스 없는 것들은
+	//죄다 눌만 나온 것
 	void 정보입력(String 이름, String 성별, String 나이, String 키) {
 		this.이름 = 이름;  //디스 점을 붙이면 클래스에 있는걸 사용
 	
-		this.성별 = 성별;
-		this.나이 = 나이;
-		this.키 = 키;
+		성별 = 성별;
+		나이 = 나이;
+		키 = 키;
 	}
 	
 	String 정보출력() {
