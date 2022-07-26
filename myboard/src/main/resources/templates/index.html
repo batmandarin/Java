@@ -36,3 +36,95 @@
 
 </body>
 </html>
+
+
+//다운로드
+Bootstrap을 다운로드하여 컴파일된 CSS 및 JavaScript, 소스 코드를 얻거나 npm, RubyGems 등과 같은 즐겨 사용하는 패키지 관리자에 포함하십시오.
+
+Carbon을 통한 광고학생과 교사는 Adobe Creative Cloud에서 최대 60% 할인을 받을 수 있습니다.
+Carbon을 통한 광고
+이 페이지에서
+컴파일된 CSS 및 JS
+소스 파일
+예
+jsDelivr를 통한 CDN
+패키지 관리자
+npm
+실
+루비젬
+작곡가
+누겟
+컴파일된 CSS 및 JS
+Bootstrap v5.1.3 용으로 즉시 사용할 수 있는 컴파일된 코드를 다운로드 하여 다음을 포함하여 프로젝트에 쉽게 드롭할 수 있습니다.
+
+컴파일 및 축소된 CSS 번들( CSS 파일 비교 참조 )
+컴파일 및 축소된 JavaScript 플러그인( JS 파일 비교 참조 )
+여기에는 문서, 소스 파일 또는 Popper와 같은 선택적 JavaScript 종속성이 포함되지 않습니다.
+
+
+소스 파일
+소스 Sass, JavaScript 및 문서 파일을 다운로드하여 자체 자산 파이프라인으로 Bootstrap을 컴파일하십시오. 이 옵션에는 몇 가지 추가 도구가 필요합니다.
+
+Sass 소스 파일을 CSS 파일로 컴파일하기 위한 Sass 컴파일러
+CSS 공급업체 접두사를 위한 자동 접두사
+전체 빌드 도구 세트가 필요한 경우 부트스트랩 및 해당 문서를 개발하는 데 포함되어 있지만 사용자의 목적에는 적합하지 않을 수 있습니다.
+
+
+예
+예제 를 다운로드하여 검토 하려면 이미 빌드된 예제를 가져올 수 있습니다.
+
+
+jsDelivr를 통한 CDN
+jsDelivr 로 다운로드를 건너 뛰어 Bootstrap의 컴파일된 CSS 및 JS의 캐시된 버전을 프로젝트에 제공합니다.
+
+복사
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+컴파일된 JavaScript를 사용하고 Popper를 별도로 포함하려는 경우 CDN을 통해 JS 앞에 Popper를 추가하는 것이 좋습니다.
+
+복사
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+패키지 관리자
+가장 인기 있는 패키지 관리자를 사용하여 부트스트랩의 소스 파일 을 거의 모든 프로젝트에 가져올 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일 버전과 일치하는 설정을 위해 Sass 컴파일러 와 Autoprefixer 가 필요합니다 .
+
+npm
+npm 패키지 를 사용하여 Node.js 기반 앱에 부트스트랩을 설치 합니다 .
+
+복사
+npm install bootstrap
+const bootstrap = require('bootstrap')또는 import bootstrap from 'bootstrap'Bootstrap의 모든 플러그인을 bootstrap개체에 로드합니다. 모듈 자체 는 bootstrap모든 플러그인을 내보냅니다. /js/dist/*.js패키지의 최상위 디렉토리에서 파일 을 로드하여 부트스트랩의 플러그인을 개별적으로 수동으로 로드할 수 있습니다 .
+
+부트스트랩 package.json은 다음 키 아래에 몇 가지 추가 메타데이터를 포함합니다.
+
+sass- Bootstrap의 기본 Sass 소스 파일 경로
+style- 기본 설정을 사용하여 미리 컴파일된 부트스트랩의 축소되지 않은 CSS 경로(사용자 정의 없음)
+스타터 프로젝트로 npm을 통해 부트스트랩을 시작하세요! twbs /bootstrap-npm-starter 템플릿 저장소로 이동하여 자신의 npm 프로젝트에서 부트스트랩을 빌드하고 사용자 정의하는 방법을 확인하십시오. Sass 컴파일러, Autoprefixer, Stylelint, PurgeCSS 및 Bootstrap 아이콘을 포함합니다.
+실
+yarn 패키지 를 사용하여 Node.js 기반 앱에 Bootstrap을 설치 합니다 .
+
+복사
+yarn add bootstrap
+루비젬
+Bundler ( 권장 ) 및 RubyGems 를 사용하여 Ruby 앱 에 다음 줄을 추가하여 Bootstrap을 설치 합니다 Gemfile.
+
+복사
+gem 'bootstrap', '~> 5.1.3'
+또는 Bundler를 사용하지 않는 경우 다음 명령을 실행하여 gem을 설치할 수 있습니다.
+
+복사
+gem install bootstrap -v 5.1.3
+자세한 내용은 gem의 README 를 참조하세요.
+
+작곡가
+Composer 를 사용하여 Bootstrap의 Sass 및 JavaScript를 설치하고 관리할 수도 있습니다 .
+
+복사
+composer require twbs/bootstrap:5.1.3
+누겟
+.NET에서 개발하는 경우 NuGet 을 사용하여 Bootstrap의 CSS 또는 Sass 및 JavaScript를 설치하고 관리할 수도 있습니다 .
+
+복사
+Install-Package bootstrap
+복사
+Install-Package bootstrap.sass//
