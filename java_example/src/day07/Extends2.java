@@ -2,10 +2,10 @@ package day07;
 
 public class Extends2 {
 		public static void main(String[] args) {
-			Member ma  = new Member();
-			Human mb = new Human();
-			mb.Info("이주순", 23);
-			ma.go();
+//			Member ma  = new Member();
+//			Human mb = new Human();
+//			mb.Info("이주순", 23);
+//			ma.go();
 		}
 }
 

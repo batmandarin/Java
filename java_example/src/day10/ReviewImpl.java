@@ -1,4 +1,4 @@
-package Day10;
+package day10;
 
 public class ReviewImpl extends ReviewAdapter{
 	static String str = "hello";  //static : 정적

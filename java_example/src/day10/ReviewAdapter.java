@@ -1,4 +1,4 @@
-package Day10;
+package day10;
 
 public abstract class ReviewAdapter implements review{
 	//인터페이스는 {]가 무조건 없어야함
