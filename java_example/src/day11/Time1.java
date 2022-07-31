@@ -21,9 +21,15 @@ class NowTime{
 		
 		SimpleDateFormat sdfl2 = new SimpleDateFormat("yyyy");
 		SimpleDateFormat sdfl3 = new SimpleDateFormat("mm");
+		System.out.println(sdfl2.format(sdfl)+"년");
+		System.out.println(Integer.parseInt(sdfl.format(date))+"월");
+	    System.out.println(sdfl2.format(date)+"년" + Integer.parseInt(sdfl.format(date))+"월");
 		
 	}
 	public void go2() {
+		String year = 
+		String Name = 
 		//Integer.parseInt로 문자열을 함수로 바꿔서 이야기
+		
 	}
 }

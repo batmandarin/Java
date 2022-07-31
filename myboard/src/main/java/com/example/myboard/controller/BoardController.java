@@ -3,27 +3,60 @@ package com.example.myboard.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-//자바는 무조건 임포트 위주,이클립스는 그게 좀 어려움 = 컨트롤+스페이스로 대체
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.myboard.model.User;
 import com.example.myboard.service.UserService;
-
 
 @Controller
 public class BoardController {
 	
 	private UserService userService;
 	
-	//여기 유저서비스가 인터페이스 다형성 구조를 컨트롤러 해서 쓰는것
 	public BoardController(UserService userService) {
 		super();
 		this.userService = userService;
 	}
 
-
-	@GetMapping("/")  //localhost:8084/  �� �̵��ϸ� ����Ǵ� �Լ�
+	@GetMapping("/")		// localhost:8080/     로 이동하면 실행하는 함수
 	public String boardPage(Model model) {
 		model.addAttribute("user", userService.getAllUser());
-		return "index";  //index.html 로 이동
+		return "index";		// index.html  로 이동
+	}
+	
+	@GetMapping("/edit/{id}")
+	public String editPage(Model model, @PathVariable Long id) {
+		model.addAttribute("user", userService.getUserById(id));
+		return "edit";			// edit.html
+	}
+	
+	@PostMapping("/")
+	public String saveUser(@ModelAttribute("user") User user) {
+		userService.saveUser(user);
+		return "redirect:/";			// 입력완료 후 localhost:8080/ 로 이동
+	}
+	
+	// GetMapping : 페이지 이동
+	// PostMapping : 무언가를 입력받아서 정보를 숨기고 페이지 이동
+	// Model model : html로 넘겨줄 값
+	// @PathVariable : html로부터 제공받은 URL
+	// @ModelAttribute : html에서 입력한 값
+	
+	@PostMapping("/{id}")
+	public String updateUser(@PathVariable Long id, 
+			@ModelAttribute("user") User user,
+			Model model) {
+		// 받은 id를 통해서 mysql에서 정보를 가져옴
+		User dbUser = userService.getUserById(id);
+		dbUser.setId(id);
+		dbUser.setFirst_name(user.getFirst_name());
+		dbUser.setLast_name(user.getLast_name());
+		dbUser.setEmail(user.getEmail());
 		
+		// userService 업데이트
+		userService.updateUser(dbUser);
+		return "redirect:/";			// localhost:8080/ 로 돌아감
 	}
 }

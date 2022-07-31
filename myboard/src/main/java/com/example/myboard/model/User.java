@@ -8,12 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="sms")
+@Table(name="user")
 public class User {
-	//ctrl + space = 자동 추가(위에 임포트)
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long no;
+	private Long id;
 	
 	@Column(name="first_name", nullable=false)
 	private String first_name;
@@ -24,7 +24,7 @@ public class User {
 	@Column(name="email")
 	private String email;
 	
-	public User() {}  //기본 생성자
+	public User() {}		// 기본 생성자
 	
 	public User(String first_name, String last_name, String email) {
 		super();
@@ -33,12 +33,12 @@ public class User {
 		this.email = email;
 	}
 
-	public Long getNo() {
-		return no;
+	public Long getId() {
+		return id;
 	}
 
-	public void setNo(Long no) {
-		this.no = no;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getFirst_name() {
@@ -65,6 +65,4 @@ public class User {
 		this.email = email;
 	}
 	
-	
-
 }
