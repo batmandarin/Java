@@ -8,7 +8,7 @@ public class Review {
 		
 		//변수
 		String 문자열 = "Run";
-		int 정수 = 0;
+		int 정수 = 0;  //int double이 안되는 이유 : 정수와 실수를 맞물릴 수 없기 때문
 		double 실수 = 0.0;
 		boolean 명제 = false;
 		//자료형 변수명;
