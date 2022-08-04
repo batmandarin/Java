@@ -41,7 +41,7 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirst_name() {
+	public String getFirst_name() { //일단 겟으로 얻게한 다음 퍼스트 네임으로 리턴 및 this로 퍼스트 네임 인스턴스 
 		return first_name;
 	}
 
