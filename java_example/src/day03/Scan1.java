@@ -16,15 +16,15 @@ public class Scan1 {
 		
 		// 입력2
 		System.out.println("글자 여러개를 입력하세요 :");
-        String 글자입력2 = sc.nextLine();
+        String 글자입력2 = sc.nextLine(); //버퍼 입력 지우기
 	    System.out.println("숫자를 입력하세요 :");
-	    int 숫자입력2 = Integer.parseInt(sc.nextLine());
+	    int 숫자입력2 = Integer.parseInt(sc.nextLine());  //입력 버퍼 지우기
 		
 		//입력받은 것 출력
 		System.out.println(글자입력2);
 		System.out.println(숫자입력2);
 		
 		sc.close();  //입력 완료
-	}
+	}  //체크 다 하고 클로즈 
 
 }
